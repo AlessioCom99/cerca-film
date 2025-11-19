@@ -1,20 +1,18 @@
 /* src/index.css */
 
-/* Importiamo un font moderno e pulito (Poppins) */
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 
-/* --- NETFLIX PALETTE --- */
 :root {
-  --primary-color: #e50914; /* Netflix Red */
-  --bg-color: #141414; /* Sfondo principale (Quasi nero) */
-  --card-bg: #222222; /* Sfondo per card e componenti */
-  --text-color: #f5f5f5; /* Testo principale (Bianco sporco) */
-  --text-secondary: #aaaaaa; /* Testo secondario (Grigio chiaro) */
-  --border-color: #555555; /* Bordi per input */
+  --primary-color: #e50914; 
+  --bg-color: #141414; 
+  --card-bg: #222222; 
+  --text-color: #f5f5f5; 
+  --text-secondary: #aaaaaa; 
+  --border-color: #555555; 
 }
 
 body {
-  font-family: "Poppins", sans-serif; /* Applichiamo il nuovo font */
+  font-family: "Poppins", sans-serif; 
   background-color: var(--bg-color);
   color: var(--text-color);
   margin: 0;

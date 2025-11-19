@@ -3,12 +3,11 @@ import React from "react";
 import { Routes, Route, Link } from "react-router-dom";
 import Home from "./pages/Home";
 import MovieDetails from "./pages/MovieDetails";
-import "./App.css"; // Creeremo questo file
+import "./App.css";   
 
 function App() {
   return (
     <div className="app-container">
-      {/* Creiamo un header semplice per tornare alla Home */}
       <header className="app-header">
         <Link to="/">
           <h1>MovieFinder</h1>
@@ -16,13 +15,8 @@ function App() {
       </header>
 
       <main>
-        {/* Qui React Router scambierà i componenti */}
         <Routes>
-          {/* Strada 1: La Home Page */}
           <Route path="/" element={<Home />} />
-
-          {/* Strada 2: La Pagina Dettagli */}
-          {/* :id è un "parametro dinamico". Verrà sostituito dall'ID del film */}
           <Route path="/movie/:id" element={<MovieDetails />} />
         </Routes>
       </main>
@@ -42,9 +36,8 @@ function App() {
           </a>
         </p>
         <p>
-          {/* NB: Aggiorna questo link con il tuo URL del repository GitHub! */}
           <a
-            href="https://github.com/AlessioCom99/react-movie-finder"
+            href="https://github.com/AlessioCom99/movie-finder"
             target="_blank"
             rel="noopener noreferrer"
           >

@@ -1,7 +1,8 @@
 // src/pages/Home.jsx
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom"; // Per cliccare sui film
-import MovieCard from "../components/MovieCard"; // Creeremo questo
+import { Link } from "react-router-dom"; 
+import MovieCard from "../components/MovieCard"; 
+import SortControl from "../components/SortControl";
 
 // Prendiamo la chiave API dal file .env
 const API_KEY = import.meta.env.VITE_TMDB_API_KEY;
@@ -14,6 +15,7 @@ function Home() {
   const [movies, setMovies] = useState([]); // Stato per i risultati
   const [loading, setLoading] = useState(false); // Stato per il caricamento
   const [error, setError] = useState(null); // Stato per gli errori
+  const [sortOrder, setSortOrder] = useState(""); // Stato per l'ordinamento
 
   // === EFFECT ===
   // Questo useEffect si attiva quando il componente appare
@@ -49,13 +51,36 @@ function Home() {
     };
 
     fetchMovies(); // Chiamiamo la funzione
-  }, [query]); // <-- Array delle dipendenze: il "grilletto"
+  }, [query]); // <-- Array delle dipendenze
 
   // === GESTIONE FORM ===
   const handleSubmit = (e) => {
     e.preventDefault(); // Impedisce al form di ricaricare la pagina
     setQuery(searchTerm); // Imposta la 'query', che farà partire l'useEffect
   };
+
+  const handleSortChange = (value) => {
+    setSortOrder(value);
+  };
+
+  // === ORDINAMENTO ===
+  const getSortedMovies = () => {
+    if (!sortOrder) return movies;
+
+    return [...movies].sort((a, b) => {
+      const dateA = new Date(a.release_date || 0);
+      const dateB = new Date(b.release_date || 0);
+
+      if (sortOrder === "date_asc") {
+        return dateA - dateB;
+      } else if (sortOrder === "date_desc") {
+        return dateB - dateA;
+      }
+      return 0;
+    });
+  };
+
+  const sortedMovies = getSortedMovies();
 
   // === RENDER ===
   return (
@@ -70,6 +95,8 @@ function Home() {
         <button type="submit">Cerca</button>
       </form>
 
+      <SortControl onSortChange={handleSortChange} />
+
       {/* 1. Gestione del Loading */}
       {loading && <p className="status-message">Caricamento in corso...</p>}
 
@@ -80,7 +107,7 @@ function Home() {
       <div className="movies-grid">
         {!loading &&
           !error &&
-          movies.map((movie) => (
+          sortedMovies.map((movie) => (
             // Usiamo il componente MovieCard
             <MovieCard key={movie.id} movie={movie} />
           ))}
