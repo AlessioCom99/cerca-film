@@ -5,6 +5,9 @@ Benvenuto su MovieFinder, un'applicazione web costruita con React che permette a
 L'interfaccia è stilizzata con un tema scuro moderno, ispirato a piattaforme di streaming come Netflix.
 
 ---
+<img width="1265" height="614" alt="movieFinder-Search" src="https://github.com/user-attachments/assets/a4100e0f-e7dc-4aa2-abd4-1bf5992b964f" />
+
+---
 
 ## Caratteristiche (Features)
 
