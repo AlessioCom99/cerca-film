@@ -1,6 +1,6 @@
 # MovieFinder
 
-Benvenuto su MovieFinder, un'applicazione web responsive costruita con React che permette agli utenti di cercare film e visualizzare informazioni dettagliate. Il progetto è stato creato per dimostrare la competenza nell'utilizzo di React, React Router e l'integrazione di API esterne.
+Benvenuto su MovieFinder, un'applicazione web costruita con React che permette agli utenti di cercare film e visualizzare informazioni dettagliate. Il progetto è stato creato per dimostrare la competenza nell'utilizzo di React, React Router e l'integrazione di API esterne.
 
 L'interfaccia è stilizzata con un tema scuro moderno, ispirato a piattaforme di streaming come Netflix.
 
@@ -23,8 +23,8 @@ Questo progetto è stato costruito utilizzando le seguenti tecnologie:
 * **React:** Per la costruzione dell'interfaccia utente.
 * **React Hooks:** Utilizzo di `useState` per la gestione dello stato locale e `useEffect` per l'esecuzione di "side effects" (chiamate API).
 * **React Router DOM:** Per la gestione della navigazione e del routing client-side (`<Routes>`, `<Route>`, `<Link>`, `useParams`).
-* **Vite:** Come build tool e server di sviluppo ultra-rapido.
-* **Fetch API (Browser):** Per effettuare chiamate asincrone all'API di TMDb.
+* **Vite:** Come build tool e server di sviluppo.
+* **Fetch API (Browser):** Per effettuare chiamate asincrone all'API di The Movie Database (TMDb).
 * **Variabili d'Ambiente:** Utilizzo di `.env.local` (gestito da Vite) per memorizzare in modo sicuro la chiave API.
 * **CSS Moderno:** Styling personalizzato (no-framework) con Flexbox, CSS Grid, Custom Properties (Variabili) e transizioni.
 
@@ -36,12 +36,12 @@ Per eseguire questo progetto in locale sul tuo computer, segui questi passaggi:
 
 1.  **Clona il repository:**
     ```bash
-    git clone [https://github.com/AlessioCom99/cerca-film.git](https://github.com/AlessioCom99/cerca-film.git)
+    git clone https://github.com/AlessioCom99/movie-finder.git
     ```
 
 2.  **Entra nella cartella del progetto:**
     ```bash
-    cd cerca-film
+    cd movie-finder
     ```
 
 3.  **Installa le dipendenze:**
@@ -65,7 +65,7 @@ Per eseguire questo progetto in locale sul tuo computer, segui questi passaggi:
     npm run dev
     ```
 
-L'applicazione sarà ora in esecuzione su `http://localhost:5173`.
+L'applicazione sarà ora in esecuzione su `http://localhost:5174`.
 
 ---
 

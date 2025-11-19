@@ -1,5 +1,4 @@
 // src/components/MovieCard.jsx
-import React from "react";
 import { Link } from "react-router-dom";
 
 // URL base per le immagini dei poster
@@ -13,7 +12,6 @@ function MovieCard({ movie }) {
     : PLACEHOLDER_IMAGE;
 
   return (
-    // Questo è il link che ci porta alla pagina /movie/:id
     <Link to={`/movie/${movie.id}`} className="movie-card">
       <img src={imageUrl} alt={movie.title} />
       <div className="movie-card-info">

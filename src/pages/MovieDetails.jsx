@@ -1,6 +1,6 @@
 // src/pages/MovieDetails.jsx
 import React, { useState, useEffect } from "react";
-import { useParams } from "react-router-dom"; // <-- Hook chiave!
+import { useParams } from "react-router-dom"; 
 
 const API_KEY = import.meta.env.VITE_TMDB_API_KEY;
 const API_URL_BASE = "https://api.themoviedb.org/3/movie/";
@@ -43,12 +43,12 @@ function MovieDetails() {
     };
 
     fetchDetails();
-  }, [id]); // <-- La dipendenza ora è l' 'id' dall'URL
+  }, [id]); // <-- La dipendenza è l' 'id' dall'URL
 
   // === RENDER ===
   if (loading) return <p className="status-message">Caricamento dettagli...</p>;
   if (error) return <p className="status-message error">Errore: {error}</p>;
-  if (!movie) return null; // Se non c'è film (es. all'inizio)
+  if (!movie) return null; 
 
   // Se abbiamo il film, mostriamo i dettagli
   const imageUrl = movie.poster_path

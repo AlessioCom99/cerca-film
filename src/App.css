@@ -2,14 +2,13 @@
 
 /* Header */
 .app-header {
-  /* Rimuoviamo lo sfondo, lo lasciamo "fluttuare" sul body */
   padding: 20px 0;
   margin-bottom: 30px;
 }
 .app-header h1 {
   text-align: center;
   margin: 0;
-  color: var(--primary-color); /* Titolo rosso Netflix */
+  color: var(--primary-color); 
   font-size: 2.5em;
   font-weight: 700;
   letter-spacing: 1px;
@@ -23,7 +22,7 @@
   color: var(--text-secondary);
 }
 .status-message.error {
-  color: var(--primary-color); /* Errori in rosso */
+  color: var(--primary-color); 
   font-weight: 500;
 }
 
@@ -31,15 +30,15 @@
 .search-form {
   display: flex;
   justify-content: center;
-  margin-bottom: 40px; /* Più spazio */
+  margin-bottom: 40px; 
   gap: 10px;
 }
 .search-form input {
   font-size: 1em;
   padding: 12px 18px;
   border: 1px solid var(--border-color);
-  background-color: var(--card-bg); /* Sfondo scuro per input */
-  color: var(--text-color); /* Testo bianco */
+  background-color: var(--card-bg); 
+  color: var(--text-color); 
   border-radius: 8px;
   width: 350px;
   outline: none;
@@ -49,13 +48,13 @@
   color: var(--text-secondary);
 }
 .search-form input:focus {
-  border-color: var(--primary-color); /* Bordo rosso al focus */
-  box-shadow: 0 0 0 3px rgba(229, 9, 20, 0.3); /* Ombra rossa */
+  border-color: var(--primary-color); 
+  box-shadow: 0 0 0 3px rgba(229, 9, 20, 0.3); 
 }
 .search-form button {
   font-size: 1em;
   padding: 12px 24px;
-  background-color: var(--primary-color); /* Bottone rosso */
+  background-color: var(--primary-color);   
   color: white;
   border: none;
   border-radius: 8px;
@@ -64,7 +63,7 @@
   transition: background-color 0.2s;
 }
 .search-form button:hover {
-  background-color: #f40612; /* Rosso più brillante al hover */
+  background-color: #f40612; 
 }
 
 /* Griglia Film (Home) */
@@ -78,12 +77,10 @@
 .movie-card {
   background: var(--card-bg);
   border-radius: 8px;
-  /* Rimuoviamo l'ombra, non si vede su sfondo scuro */
   overflow: hidden;
-  transition: transform 0.2s ease-in-out; /* Effetto più fluido */
+  transition: transform 0.2s ease-in-out; 
 }
 .movie-card:hover {
-  /* Effetto "Netflix hover" che ingrandisce la card */
   transform: scale(1.05);
   z-index: 10;
 }
@@ -99,9 +96,9 @@
   font-size: 1.1em;
   margin: 0 0 5px 0;
   color: var(--text-color);
-  white-space: nowrap; /* Impedisce al titolo di andare a capo */
+  white-space: nowrap; 
   overflow: hidden;
-  text-overflow: ellipsis; /* Aggiunge ... se il titolo è troppo lungo */
+  text-overflow: ellipsis; 
 }
 .movie-card-info p {
   font-size: 0.9em;
@@ -112,23 +109,23 @@
 /* Movie Details (Page) */
 .movie-details-page {
   display: flex;
-  flex-wrap: wrap; /* Per schermi piccoli */
+  flex-wrap: wrap; 
   gap: 30px;
-  background: var(--card-bg); /* Sfondo scuro per i dettagli */
+  background: var(--card-bg); 
   padding: 30px;
   border-radius: 8px;
   margin-top: 20px;
 }
 .movie-details-page img {
   width: 300px;
-  max-width: 100%; /* Per responsive */
+  max-width: 100%;  
   height: auto;
   border-radius: 8px;
   object-fit: cover;
 }
 .movie-details-info {
   flex: 1;
-  min-width: 300px; /* Per responsive */
+  min-width: 300px;     
 }
 .movie-details-info h2 {
   margin-top: 0;
@@ -142,23 +139,23 @@
 }
 .movie-details-info h3 {
   color: var(--text-color);
-  border-bottom: 2px solid var(--primary-color); /* Sottolineatura rossa */
+  border-bottom: 2px solid var(--primary-color); 
   padding-bottom: 5px;
   margin-top: 20px;
 }
 .movie-details-info strong {
-  color: var(--text-color); /* Testo in grassetto più leggibile */
+  color: var(--text-color); 
 }
 
 /* --- Stili Footer --- */
 .app-footer {
   text-align: center;
   padding: 40px 20px;
-  margin-top: 50px; /* Spazio sopra il footer */
+  margin-top: 50px; 
 
   /* Stile coerente con il tema scuro */
-  background-color: var(--bg-color); /* Lo sfondo nero principale */
-  color: var(--text-secondary); /* Testo grigio chiaro */
+  background-color: var(--bg-color); 
+  color: var(--text-secondary); 
 
   /* Sottile linea di separazione superiore */
   border-top: 1px solid #222;
@@ -166,11 +163,11 @@
 }
 
 .app-footer p {
-  margin: 10px 0; /* Spaziatura tra le righe */
+  margin: 10px 0; 
 }
 
 .app-footer a {
-  color: var(--primary-color); /* Link rossi (Netflix Red) */
+  color: var(--primary-color); 
   font-weight: 600;
   text-decoration: none;
   transition: opacity 0.2s;
@@ -182,6 +179,31 @@
 }
 
 .app-footer strong {
-  color: var(--text-color); /* Testo bianco principale */
+  color: var(--text-color); 
   font-weight: 600;
+}
+
+/* Sort Control */
+.sort-control {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+  gap: 10px;
+  color: var(--text-secondary);
+}
+
+.sort-control select {
+  padding: 10px 15px;
+  border-radius: 5px;
+  border: 1px solid var(--border-color);
+  background-color: var(--card-bg);
+  color: var(--text-color);
+  font-size: 1em;
+  cursor: pointer;
+  outline: none;
+}
+
+.sort-control select:focus {
+  border-color: var(--primary-color);
 }
